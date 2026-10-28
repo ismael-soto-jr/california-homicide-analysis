@@ -1,0 +1,1 @@
+Place the original historical California DOJ CSV and NCIC jurisdiction Excel workbook in this directory for local reproduction. These files are excluded from Git pending a source redistribution review.
