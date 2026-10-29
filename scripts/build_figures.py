@@ -122,7 +122,7 @@ def main():
     args = parser.parse_args()
     annual, age, county = tracked_summaries() if args.from_summaries else source_summaries()
     validate(annual, age, county)
-    plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 11, "svg.fonttype": "none"})
+    plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 11, "svg.fonttype": "none", "svg.hashsalt": "california-homicide-2018-2022"})
     plot_year(annual)
     plot_bar(age, "age_group_victim_records", "Victim records by reported age group", "02",
              "25–34", [
