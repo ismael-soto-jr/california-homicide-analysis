@@ -17,3 +17,7 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Run synthetic regression tests
         run: python -m pytest -q
+      - name: Reproduce portfolio figures from tracked summaries
+        env:
+          MPLBACKEND: Agg
+        run: python scripts/build_figures.py --from-summaries
