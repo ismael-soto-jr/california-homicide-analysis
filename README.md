@@ -2,7 +2,7 @@
 
 **Research analyst portfolio project · Python · pandas · data validation**
 
-A compact, auditable workflow that turns a historical California Department of Justice (DOJ) OpenJustice extract into a cleaned dataset for descriptive analysis. This repository intentionally focuses on **Phase 1: source-data preparation**, before creating charts or drawing substantive conclusions.
+A compact, auditable workflow that turns a historical California Department of Justice (DOJ) OpenJustice extract into a cleaned dataset for descriptive analysis. Phase 1 validates the historical source records; Phase 2 adds carefully documented descriptive visualizations and aggregate summary tables.
 
 ## Project structure
 
@@ -52,6 +52,36 @@ The older audit reported **88,930 source rows** and **10,106 records in 2018–2
 ## Official source documentation
 
 The June 2023 California DOJ CJSC *Homicide File Context* provides the field definitions for crime status, incident dates, victim age, sex, and race/ethnicity. See [source codebook notes](docs/source_codebook.md). We confirmed that all 10,106 selected records are coded **1 = actual/willful homicide**. Importantly, `incident_date` is the **date of the assault**, not necessarily the date of death. The combined race/ethnicity coding and 2021–2022 reporting transition require particular care.
+
+
+## Phase 2: Descriptive analysis and visualizations
+
+Three descriptive figure previews are now available below, with transparent summary tables and reproducible Matplotlib code.
+
+**Annual source victim records (2018–2022)**  
+![Reported victim records by incident year](figures/annual_victim_records.svg)
+
+**Victim-record distribution by reported age group**  
+![Recorded age group](figures/age_group_victim_records.svg)
+
+**Counties with the largest recorded counts**  
+![Top 10 county counts](figures/top_10_counties.svg)
+
+**Research highlights:** Annual source-record counts peaked at **2,338 in 2021**; records aged **25–34** were the largest broad age group (**2,754**); and **Los Angeles County** accounted for the largest county total (**3,296**). These are **raw victim-record counts, not population-adjusted homicide rates**, and direct comparison of annual counts is complicated by changes in reporting systems.
+
+See [interpretations and limitations](reports/exploratory_findings.md), [three aggregate CSV tables](reports/), and [the plotting script](scripts/build_figures.py).
+
+To regenerate figures after producing the cleaned CSV:
+
+```bash
+python scripts/build_figures.py
+```
+
+To reproduce equivalent figures **without downloading raw data**, using the published aggregate CSVs:
+
+```bash
+python scripts/build_figures.py --from-summaries
+```
 
 ## Interpretation and limitations
 
