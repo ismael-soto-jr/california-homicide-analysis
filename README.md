@@ -46,7 +46,7 @@ The script writes `data/processed/homicide_clean.csv` after all expected-count c
 - Create broad age groups that distinguish coded infants from unknown ages.
 - Assert source-record and annual-count benchmarks from the previous methodological audit.
 
-The older audit reported **88,930 source rows** and **10,106 records in 2018–2022** (annual counts: 2018 = 1,738; 2019 = 1,665; 2020 = 2,178; 2021 = 2,338; 2022 = 2,187). It also identified **six ambiguous exact matches** and **161 county-code-54 records**. The new standalone script still needs to be executed against those actual inputs before the output is considered validated.
+The older audit reported **88,930 source rows** and **10,106 records in 2018–2022** (annual counts: 2018 = 1,738; 2019 = 1,665; 2020 = 2,178; 2021 = 2,338; 2022 = 2,187). It also identified **six ambiguous exact matches** and **161 county-code-54 records**. The standalone pipeline **was run against both original source files on October 28, 2026**; all count checks passed and the generated CSV contained exactly 10,106 records. Six synthetic regression tests also passed. The files themselves are not checked into this repo.
 
 ## Interpretation and limitations
 
