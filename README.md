@@ -36,6 +36,19 @@ python prepare_homicides.py
 
 The script writes `data/processed/homicide_clean.csv` after all expected-count checks pass.
 
+## Quick start: no source-data download required
+
+The **synthetic demonstration** runs the actual cleaning functions using invented observations. To reproduce the publication charts, use the three tracked aggregate tables:
+
+```bash
+python -m pip install -r requirements.txt
+python -m pytest -q
+python examples/synthetic_demo.py
+python scripts/build_figures.py --from-summaries
+```
+
+This re-creates the three Matplotlib charts without needing the original CSV or workbook. Rebuilding the individual-level historical dataset separately requires those archived inputs. See [data access and reproducibility](docs/data_access.md) for the distinction.
+
 ## What is checked
 
 - Restrict to incident years **2018–2022**, keeping original source-row identifiers.
