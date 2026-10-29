@@ -47,11 +47,15 @@ def age_groups(raw: pd.Series) -> pd.Series:
 
 
 def prepare(source: pd.DataFrame, reference: pd.DataFrame) -> pd.DataFrame:
-    required = {"Inc YR", "Inc MO", "Inc day", "CO", "V age", "V sex", "V race"}
+    required = {"Inc YR", "Inc MO", "Inc day", "CO", "V age", "V sex", "V race", "Crm Stat"}
     if missing := required - set(source.columns):
         raise ValueError(f"Source data missing columns: {sorted(missing)}")
     years = pd.to_numeric(source["Inc YR"], errors="coerce")
     selected = source.loc[years.between(2018, 2022)].copy()
+    # DOJ June 2023 codebook: 1 = actual/willful homicide;
+    # 2/4 are justifiable homicides, 3 is manslaughter.
+    if not selected["Crm Stat"].eq(1).all():
+        raise ValueError("Study sample includes non-actual/willful homicide records")
     selected["source_csv_row"] = selected.index + 2
     selected["incident_year"] = years.loc[selected.index].astype(int)
     month = pd.to_numeric(selected["Inc MO"], errors="raise")
