@@ -68,7 +68,7 @@ def prepare(source: pd.DataFrame, reference: pd.DataFrame) -> pd.DataFrame:
     selected["county_code"] = pd.to_numeric(selected["CO"], errors="raise").astype("Int64")
     selected["victim_age_code"] = selected["V age"].astype("string").str.strip()
     selected["victim_age_group"] = age_groups(selected["V age"])
-    selected["victim_sex_code"] = selected["V sex"].astype("string")
+    selected["victim_sex_code"] = pd.to_numeric(selected["V sex"], errors="raise").astype("Int64").astype("string")
     selected["victim_race_code"] = selected["V race"].astype("string")
 
     count_before = len(selected)
