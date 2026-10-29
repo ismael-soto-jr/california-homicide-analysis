@@ -1,2 +1,205 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" role="img" aria-label="California homicide victim records by incident year 2018 to 2022"><title>California homicide victim records by incident year 2018 to 2022</title><desc>Five annual source victim record totals. Counts are not rates. DOJ reporting transition limits comparisons.</desc><rect width="1100" height="660" fill="#ffffff"/><text x="125" y="65" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#16324F" fill="#087E8B" font-weight="bold">CALIFORNIA HOMICIDE RECORDS / 01</text><text x="125" y="115" font-family="Arial,Helvetica,sans-serif" font-size="33" fill="#16324F" font-weight="bold">Reported victim records by incident year</text><line x1="165" x2="975" y1="480" y2="480" stroke="#E3EBF0" stroke-width="2"/><text x="147" y="487" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#16324F" text-anchor="end">0</text><line x1="165" x2="975" y1="425.5357142857143" y2="425.5357142857143" stroke="#E3EBF0" stroke-width="2"/><text x="147" y="432.5357142857143" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#16324F" text-anchor="end">500</text><line x1="165" x2="975" y1="371.07142857142856" y2="371.07142857142856" stroke="#E3EBF0" stroke-width="2"/><text x="147" y="378.07142857142856" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#16324F" text-anchor="end">1,000</text><line x1="165" x2="975" y1="316.6071428571429" y2="316.6071428571429" stroke="#E3EBF0" stroke-width="2"/><text x="147" y="323.6071428571429" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#16324F" text-anchor="end">1,500</text><line x1="165" x2="975" y1="262.1428571428571" y2="262.1428571428571" stroke="#E3EBF0" stroke-width="2"/><text x="147" y="269.1428571428571" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#16324F" text-anchor="end">2,000</text><line x1="165" x2="975" y1="207.6785714285714" y2="207.6785714285714" stroke="#E3EBF0" stroke-width="2"/><text x="147" y="214.6785714285714" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#16324F" text-anchor="end">2,500</text><text x="165" y="517" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#16324F" text-anchor="middle">2018</text><text x="367.5" y="517" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#16324F" text-anchor="middle">2019</text><text x="570" y="517" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#16324F" text-anchor="middle">2020</text><text x="772.5" y="517" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#16324F" text-anchor="middle">2021</text><text x="975" y="517" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#16324F" text-anchor="middle">2022</text><polyline points="165,290.6821428571429 367.5,298.63392857142856 570,242.75357142857143 772.5,225.32500000000002 975,241.7732142857143" fill="none" stroke="#087E8B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="165" cy="290.6821428571429" r="8" fill="#087E8B" stroke="#fff" stroke-width="2"/><text x="165" y="271.6821428571429" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#16324F" text-anchor="middle" font-weight="bold">1,738</text><circle cx="367.5" cy="298.63392857142856" r="8" fill="#087E8B" stroke="#fff" stroke-width="2"/><text x="367.5" y="279.63392857142856" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#16324F" text-anchor="middle" font-weight="bold">1,665</text><circle cx="570" cy="242.75357142857143" r="8" fill="#087E8B" stroke="#fff" stroke-width="2"/><text x="570" y="223.75357142857143" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#16324F" text-anchor="middle" font-weight="bold">2,178</text><circle cx="772.5" cy="225.32500000000002" r="8" fill="#087E8B" stroke="#fff" stroke-width="2"/><text x="772.5" y="206.32500000000002" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#16324F" text-anchor="middle" font-weight="bold">2,338</text><circle cx="975" cy="241.7732142857143" r="8" fill="#087E8B" stroke="#fff" stroke-width="2"/><text x="975" y="222.7732142857143" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#16324F" text-anchor="middle" font-weight="bold">2,187</text><text x="125" y="585" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#16324F" fill="#64748B">Source: California DOJ OpenJustice 2018–2022. Counts, not rates or verified unique incidents.</text><text x="125" y="613" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#16324F" fill="#64748B">Caution: 2021–2022 reporting format transition limits direct year comparisons.</text></svg>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="694.491797pt" height="355.467625pt" viewBox="0 0 694.491797 355.467625" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-29T00:00:00+00:00</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 355.467625 
+L 694.491797 355.467625 
+L 694.491797 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 71.691797 282.097656 
+L 687.291797 282.097656 
+L 687.291797 74.197656 
+L 71.691797 74.197656 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="105.891797" y="298.455078" transform="rotate(-0 105.891797 298.455078)">2018</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="242.691797" y="298.455078" transform="rotate(-0 242.691797 298.455078)">2019</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="379.491797" y="298.455078" transform="rotate(-0 379.491797 298.455078)">2020</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="516.291797" y="298.455078" transform="rotate(-0 516.291797 298.455078)">2021</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="653.091797" y="298.455078" transform="rotate(-0 653.091797 298.455078)">2022</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path d="M 71.691797 282.097656 
+L 687.291797 282.097656 
+" clip-path="url(#p3923659600)" style="fill: none; stroke: #e4ebf0; stroke-width: 0.85; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7"/>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #16324f" x="63.691797" y="286.276367" transform="rotate(-0 63.691797 286.276367)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path d="M 71.691797 244.972656 
+L 687.291797 244.972656 
+" clip-path="url(#p3923659600)" style="fill: none; stroke: #e4ebf0; stroke-width: 0.85; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9"/>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #16324f" x="63.691797" y="249.151367" transform="rotate(-0 63.691797 249.151367)">500</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path d="M 71.691797 207.847656 
+L 687.291797 207.847656 
+" clip-path="url(#p3923659600)" style="fill: none; stroke: #e4ebf0; stroke-width: 0.85; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11"/>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #16324f" x="63.691797" y="212.026367" transform="rotate(-0 63.691797 212.026367)">1,000</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <path d="M 71.691797 170.722656 
+L 687.291797 170.722656 
+" clip-path="url(#p3923659600)" style="fill: none; stroke: #e4ebf0; stroke-width: 0.85; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13"/>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #16324f" x="63.691797" y="174.901367" transform="rotate(-0 63.691797 174.901367)">1,500</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_14">
+      <path d="M 71.691797 133.597656 
+L 687.291797 133.597656 
+" clip-path="url(#p3923659600)" style="fill: none; stroke: #e4ebf0; stroke-width: 0.85; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_15"/>
+     <g id="text_10">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #16324f" x="63.691797" y="137.776367" transform="rotate(-0 63.691797 137.776367)">2,000</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16">
+      <path d="M 71.691797 96.472656 
+L 687.291797 96.472656 
+" clip-path="url(#p3923659600)" style="fill: none; stroke: #e4ebf0; stroke-width: 0.85; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_17"/>
+     <g id="text_11">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #16324f" x="63.691797" y="100.651367" transform="rotate(-0 63.691797 100.651367)">2,500</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="15.558281" y="178.147656" transform="rotate(-90 15.558281 178.147656)">Source victim records</text>
+    </g>
+   </g>
+   <g id="line2d_18">
+    <path d="M 105.891797 153.051156 
+L 242.691797 158.471406 
+L 379.491797 120.381156 
+L 516.291797 108.501156 
+L 653.091797 119.712906 
+" clip-path="url(#p3923659600)" style="fill: none; stroke: #087e8b; stroke-width: 3; stroke-linecap: square"/>
+    <defs>
+     <path id="m1129b62f54" d="M 0 4.5 
+C 1.193414 4.5 2.338109 4.025852 3.181981 3.181981 
+C 4.025852 2.338109 4.5 1.193414 4.5 0 
+C 4.5 -1.193414 4.025852 -2.338109 3.181981 -3.181981 
+C 2.338109 -4.025852 1.193414 -4.5 0 -4.5 
+C -1.193414 -4.5 -2.338109 -4.025852 -3.181981 -3.181981 
+C -4.025852 -2.338109 -4.5 -1.193414 -4.5 0 
+C -4.5 1.193414 -4.025852 2.338109 -3.181981 3.181981 
+C -2.338109 4.025852 -1.193414 4.5 0 4.5 
+z
+" style="stroke: #087e8b"/>
+    </defs>
+    <g clip-path="url(#p3923659600)">
+     <use xlink:href="#m1129b62f54" x="105.891797" y="153.051156" style="fill: #087e8b; stroke: #087e8b"/>
+     <use xlink:href="#m1129b62f54" x="242.691797" y="158.471406" style="fill: #087e8b; stroke: #087e8b"/>
+     <use xlink:href="#m1129b62f54" x="379.491797" y="120.381156" style="fill: #087e8b; stroke: #087e8b"/>
+     <use xlink:href="#m1129b62f54" x="516.291797" y="108.501156" style="fill: #087e8b; stroke: #087e8b"/>
+     <use xlink:href="#m1129b62f54" x="653.091797" y="119.712906" style="fill: #087e8b; stroke: #087e8b"/>
+    </g>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="105.891797" y="140.051156" transform="rotate(-0 105.891797 140.051156)">1,738</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="242.691797" y="145.471406" transform="rotate(-0 242.691797 145.471406)">1,665</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="379.491797" y="107.381156" transform="rotate(-0 379.491797 107.381156)">2,178</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="516.291797" y="95.501156" transform="rotate(-0 516.291797 95.501156)">2,338</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #16324f" x="653.091797" y="106.712906" transform="rotate(-0 653.091797 106.712906)">2,187</text>
+   </g>
+  </g>
+  <g id="text_18">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #087e8b" x="71.691797" y="14.797656" transform="rotate(-0 71.691797 14.797656)">CALIFORNIA HOMICIDE RECORDS  /  01</text>
+  </g>
+  <g id="text_19">
+   <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #16324f" x="71.691797" y="46.477656" transform="rotate(-0 71.691797 46.477656)">Reported victim records by incident year</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #718096" x="71.691797" y="333.577656" transform="rotate(-0 71.691797 333.577656)">California DOJ OpenJustice, 2018–2022. Counts, not rates or unique incidents.</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #718096" x="71.691797" y="346.249656" transform="rotate(-0 71.691797 346.249656)">Note: 2021–2022 reporting-format transition limits direct comparisons across years.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3923659600">
+   <rect x="71.691797" y="74.197656" width="615.6" height="207.9"/>
+  </clipPath>
+ </defs>
+</svg>
