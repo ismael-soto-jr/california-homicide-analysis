@@ -19,6 +19,7 @@ def sample():
         "V age": ["0", "NB", "25", "99", "99"],
         "V sex": [1, 2, 1, 0, 0],
         "V race": ["W", "B", "H", "X", "X"],
+        "Crm Stat": [1, 1, 1, 1, 1],
     })
 
 
@@ -59,3 +60,10 @@ def test_invalid_incident_date_rejected():
 def test_missing_canonical_county_code_rejected():
     with pytest.raises(ValueError, match="16 must map"):
         county_lookup(reference().query("CntyCode != 16"))
+
+
+def test_non_willful_homicide_status_rejected():
+    data = sample()
+    data.loc[1, "Crm Stat"] = 2
+    with pytest.raises(ValueError, match="non-actual/willful homicide"):
+        prepare(data, reference())
