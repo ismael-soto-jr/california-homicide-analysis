@@ -27,6 +27,7 @@ def test_row_preservation_and_county_merge():
     assert len(result) == 4
     assert result["county"].tolist() == ["Tulare County", "Kings County", "Tulare County", "Tulare County"]
     assert result["source_csv_row"].tolist() == [3, 4, 5, 6]
+    assert result["victim_sex_code"].tolist() == ["2", "1", "0", "0"]
 
 
 def test_age_code_handling():
