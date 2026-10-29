@@ -48,6 +48,11 @@ The script writes `data/processed/homicide_clean.csv` after all expected-count c
 
 The older audit reported **88,930 source rows** and **10,106 records in 2018–2022** (annual counts: 2018 = 1,738; 2019 = 1,665; 2020 = 2,178; 2021 = 2,338; 2022 = 2,187). It also identified **six ambiguous exact matches** and **161 county-code-54 records**. The standalone pipeline **was run against both original source files on October 28, 2026**; all count checks passed and the generated CSV contained exactly 10,106 records. Six synthetic regression tests also passed. The files themselves are not checked into this repo.
 
+
+## Official source documentation
+
+The June 2023 California DOJ CJSC *Homicide File Context* provides the field definitions for crime status, incident dates, victim age, sex, and race/ethnicity. See [source codebook notes](docs/source_codebook.md). We confirmed that all 10,106 selected records are coded **1 = actual/willful homicide**. Importantly, `incident_date` is the **date of the assault**, not necessarily the date of death. The combined race/ethnicity coding and 2021–2022 reporting transition require particular care.
+
 ## Interpretation and limitations
 
 **Unit of analysis: source homicide victim records**, not proven unique people or homicide incidents. The project does not calculate population-adjusted rates or causal effects. Exact matches without case identifiers may represent separate people; reporting changes in 2021–2022 may complicate time comparisons. See the [California DOJ OpenJustice portal](https://openjustice.doj.ca.gov/data) for source context.
