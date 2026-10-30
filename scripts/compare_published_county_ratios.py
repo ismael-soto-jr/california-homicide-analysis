@@ -26,6 +26,13 @@ REFERENCE = ROOT / "reports/doj_published_table14_county_year.csv"
 POPULATION = ROOT / "data/raw/county_population_2018_2022.csv"
 CSV_OUTPUT = ROOT / "data/processed/published_county_pooled_2018_2022.csv"
 PNG_OUTPUT = ROOT / "data/processed/published_count_vs_population_adjusted.png"
+EXPECTED_POP_YEAR_TOTALS = {
+    2018: 39_476_064,
+    2019: 39_529_566,
+    2020: 39_541_742,
+    2021: 39_260_048,
+    2022: 39_220_037,
+}
 
 
 def pooled_comparison(
@@ -46,6 +53,12 @@ def pooled_comparison(
     population = validate_population(
         population, require_full_state=require_full_panel
     )
+    if require_full_panel:
+        statewide = population.groupby("year")["population"].sum().to_dict()
+        if statewide != EXPECTED_POP_YEAR_TOTALS:
+            raise ValueError(
+                f"DOF county populations do not reconcile to verified statewide totals: {statewide}"
+            )
     joined = published.merge(
         population,
         on=["county", "year"],
