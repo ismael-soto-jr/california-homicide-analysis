@@ -1,0 +1,59 @@
+county,published_homicide_count,population_person_years,years_observed,mean_annual_population,annualized_count_per_100k
+Los Angeles County,3335,49951722,5,9990344,6.68
+San Diego County,510,16478418,5,3295684,3.09
+Orange County,296,15906809,5,3181362,1.86
+Riverside County,590,12078285,5,2415657,4.88
+San Bernardino County,817,10889873,5,2177975,7.5
+Santa Clara County,228,9596805,5,1919361,2.38
+Alameda County,635,8345581,5,1669116,7.61
+Sacramento County,458,7883921,5,1576784,5.81
+Contra Costa County,232,5809313,5,1161863,3.99
+Fresno County,373,5027969,5,1005594,7.42
+Kern County,526,4527376,5,905475,11.62
+San Francisco County,248,4284096,5,856819,5.79
+Ventura County,117,4210830,5,842166,2.78
+San Joaquin County,307,3887089,5,777418,7.9
+San Mateo County,69,3780256,5,756051,1.83
+Stanislaus County,151,2755698,5,551140,5.48
+Sonoma County,59,2442083,5,488417,2.42
+Tulare County,161,2364178,5,472836,6.81
+Solano County,148,2253970,5,450794,6.57
+Santa Barbara County,75,2226169,5,445234,3.37
+Monterey County,114,2194143,5,438829,5.2
+Placer County,32,2023925,5,404785,1.58
+San Luis Obispo County,20,1405460,5,281092,1.42
+Merced County,107,1404567,5,280913,7.62
+Santa Cruz County,37,1346463,5,269293,2.75
+Marin County,13,1302916,5,260583,1.0
+Yolo County,27,1086217,5,217243,2.49
+Butte County,53,1084235,5,216847,4.89
+El Dorado County,24,946564,5,189313,2.54
+Shasta County,31,908219,5,181644,3.41
+Imperial County,45,902371,5,180474,4.99
+Madera County,35,783461,5,156692,4.47
+Kings County,47,758279,5,151656,6.2
+Napa County,5,689065,5,137813,0.73
+Humboldt County,41,679938,5,135988,6.03
+Nevada County,16,509031,5,101806,3.14
+Sutter County,17,497819,5,99564,3.41
+Mendocino County,32,455126,5,91025,7.03
+Yuba County,27,406855,5,81371,6.64
+Lake County,20,338029,5,67606,5.92
+Tehama County,20,327079,5,65416,6.11
+San Benito County,9,320798,5,64160,2.81
+Tuolumne County,6,274073,5,54815,2.19
+Calaveras County,6,225687,5,45137,2.66
+Siskiyou County,16,219495,5,43899,7.29
+Amador County,10,201154,5,40231,4.97
+Lassen County,3,158383,5,31677,1.89
+Glenn County,5,142641,5,28528,3.51
+Del Norte County,9,136500,5,27300,6.59
+Colusa County,4,109215,5,21843,3.66
+Plumas County,2,98093,5,19619,2.04
+Inyo County,3,94592,5,18918,3.17
+Mariposa County,5,85619,5,17124,5.84
+Trinity County,7,79850,5,15970,8.77
+Mono County,3,65764,5,13153,4.56
+Modoc County,1,43309,5,8662,2.31
+Sierra County,0,16108,5,3222,0.0
+Alpine County,0,5973,5,1195,0.0
