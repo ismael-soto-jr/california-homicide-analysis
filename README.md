@@ -24,6 +24,8 @@ I developed a Python workflow to clean, validate, and summarize a **historical C
 
 These figures summarize the **frozen 2018–2022 historical extract**, not current California homicide conditions. See the [full findings and cautions](reports/exploratory_findings.md).
 
+**Additional descriptive analysis:** In this sample, the 18–44 age bands account for **66.67%** of records, while the ten counties with the largest totals account for **77.00%**. These are *shares of source records*, not population-adjusted risks. See the [composition analysis](reports/composition_findings.md) and its [reproducible metrics](reports/composition_metrics.csv).
+
 ## Visualizations
 
 ### 1. Records by incident year
@@ -70,6 +72,7 @@ python -m pip install -r requirements.txt
 python -m pytest -q
 python examples/synthetic_demo.py
 python scripts/build_figures.py --from-summaries
+python scripts/analyze_summaries.py --check
 ```
 
 This runs synthetic tests and a demonstration of the preparation functions, then regenerates the figures from the published aggregate tables. **It does not independently reconstruct the original individual-level dataset.**

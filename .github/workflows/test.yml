@@ -23,3 +23,5 @@ jobs:
         env:
           MPLBACKEND: Agg
         run: python scripts/build_figures.py --from-summaries
+      - name: Verify public descriptive composition metrics
+        run: python scripts/analyze_summaries.py --check
