@@ -118,6 +118,12 @@ The workflow has been run locally with **Python 3.14.10**; GitHub Actions tests 
 
 For details, consult the [source codebook notes](docs/source_codebook.md), [validation notes](reports/validation_results.md), and [interpretive findings](reports/exploratory_findings.md).
 
+## Exploratory county-year population adjustment (in development)
+
+A [separate, validated Python workflow](scripts/county_record_ratios.py) is available for matching source victim-record counts to **county-year July 1 resident population estimates**. This extension requires an external, verified **58-county × five-year** population file. The output is intentionally kept local and **no resulting county-year ratios, rankings, or risk claims have been published**.
+
+See the [population-denominator instructions and reporting cautions](docs/population_denominators.md). The eight existing regression and summary tests are supplemented by seven synthetic tests for population validation and county-year joins.
+
 ## Next research directions
 
 Potential extensions include carefully matched population denominators for county-level rates, greater scrutiny of reporting-system changes, and additional descriptive variables after validating their source coding. These are **planned directions**, not analyses currently completed here.
