@@ -1,8 +1,9 @@
 """Self-contained tests for the DOJ Table 14 population comparison."""
 import pandas as pd
 import pytest
+from pathlib import Path
 
-from scripts.compare_published_county_ratios import pooled_comparison, plot_comparison
+from scripts.compare_published_county_ratios import pooled_comparison, plot_comparison, validate_published_summary
 
 
 def published_sample():
@@ -68,3 +69,18 @@ def test_comparison_figure_rendered(tmp_path):
     plot_comparison(out, png, top_n=2)
     assert png.is_file()
     assert png.stat().st_size > 1_000
+
+
+def test_published_pooled_summary_is_consistent():
+    summary = pd.read_csv(Path(__file__).resolve().parents[1] / "reports/published_county_pooled_2018_2022.csv")
+    validated = validate_published_summary(summary)
+    assert len(validated) == 58
+    assert validated["published_homicide_count"].sum() == 10_187
+    assert validated.iloc[0]["county"] == "Los Angeles County"
+
+
+def test_inconsistent_public_ratio_rejected():
+    summary = pd.read_csv(Path(__file__).resolve().parents[1] / "reports/published_county_pooled_2018_2022.csv")
+    summary.loc[0, "annualized_count_per_100k"] = 99
+    with pytest.raises(ValueError, match="ratios do not reconcile"):
+        validate_published_summary(summary)
