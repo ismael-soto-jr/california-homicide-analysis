@@ -1,0 +1,7 @@
+dimension,subset,victim_records,share_pct
+age,Ages 18–44,6738,66.67
+age,Ages 25–34,2754,27.25
+age,Unknown age,53,0.52
+county,Los Angeles County,3296,32.61
+county,Top 5 counties,5852,57.91
+county,Top 10 counties,7782,77.00
