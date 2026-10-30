@@ -126,13 +126,23 @@ See the [population-denominator instructions and reporting cautions](docs/popula
 
 **Published-source reconciliation:** A separate [58-county, five-year DOJ Table 14 reference](reports/doj_published_table14_county_year.csv) can now be checked against the archived sample using [reconciliation code](scripts/reconcile_doj_publication.py). The published report totals **10,187** known-victim homicide crimes versus **10,106** archived source rows; differences have **not** been resolved or corrected. See the [methodological reconciliation note](docs/doj_publication_reconciliation.md). The reference CSV and its validation can be reproduced without the original individual-level source files.
 
-## Published county counts compared with population (exploratory)
+## Published county counts versus population-adjusted comparisons
 
-A separate [Python comparison script](scripts/compare_published_county_ratios.py) now uses the DOJ's published county-year homicide-crime table and a verified local California Department of Finance county population CSV to calculate **five-year pooled annualized counts per 100,000 residents**.
+To examine how county population sizes change descriptive comparisons, I separately used the **official DOJ published county-year counts** (10,187 statewide for 2018–2022) and Department of Finance July 1 annual population estimates. These are **not the same input records** as the historical 10,106-row archive analyzed above; the difference is [documented and audited](docs/doj_publication_reconciliation.md).
 
-The local CSV and chart are deliberately **not published yet**: source definitions, the reporting transition, and mixed-vintage population estimates require careful interpretation. A two-panel figure selects the **same 12 largest-population counties** for absolute published counts and annualized population-adjusted descriptive ratios.
+![Published homicide counts compared with annualized population-adjusted counts for California's 12 most populous counties](figures/published_count_vs_population_adjusted.svg)
 
-See [data sources, formula, and caveats](docs/published_county_population_comparison.md). Run `python scripts/compare_published_county_ratios.py` locally after preparing the complete population file.
+**Finding:** Among the 12 counties with the largest mean populations, Los Angeles County had **3,335** published homicide counts over 2018–2022 versus **526** in Kern County. After dividing each county's five-year count by the *sum of its five annual populations* and scaling by 100,000, Kern's **annualized descriptive count ratio was 11.62**, compared with **6.68** in Los Angeles County. The county ordering is by mean population, not by homicide counts or the resulting ratios.
+
+**Interpretation:** Population denominators materially change how absolute crime counts appear across counties. However, the DOJ series records the **county of the reporting agency**, not necessarily victims' residence; DOJ reporting transitioned in 2021–2022; and the DOF population denominators combine two estimate vintages. The values are **descriptive ratios, not causal estimates, individual homicide risks, or official county risk rankings**.
+
+The chart can be regenerated without the local DOF workbooks using a [published 58-county pooled summary table](reports/published_county_pooled_2018_2022.csv):
+
+```bash
+python scripts/compare_published_county_ratios.py --from-summary
+```
+
+For full source-join validation, see the [analysis code](scripts/compare_published_county_ratios.py), [population documentation](docs/published_county_population_comparison.md), and [DOJ Table 14 county-year table](reports/doj_published_table14_county_year.csv).
 
 ## Next research directions
 
