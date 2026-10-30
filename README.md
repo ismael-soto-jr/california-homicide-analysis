@@ -1,105 +1,124 @@
-# California Homicide Data Preparation (2018–2022)
+# California Homicide Analysis (2018–2022)
 
-**Research analyst portfolio project · Python · pandas · data validation**
+**Research analyst portfolio project | Python · pandas · Matplotlib · data validation**
 
-A compact, auditable workflow that turns a historical California Department of Justice (DOJ) OpenJustice extract into a cleaned dataset for descriptive analysis. Phase 1 validates the historical source records; Phase 2 adds carefully documented descriptive visualizations and aggregate summary tables.
+[![Data preparation tests](https://github.com/ismael-soto-jr/california-homicide-analysis/actions/workflows/test.yml/badge.svg)](https://github.com/ismael-soto-jr/california-homicide-analysis/actions/workflows/test.yml)
 
-## Project structure
+## Project overview
 
-| File or directory | Purpose |
-| --- | --- |
-| `prepare_homicides.py` | Filter, clean, check county merges, and export analysis-ready records |
-| `tests/test_prepare.py` | Synthetic regression tests that don't require the source datasets |
-| `requirements.txt` | Python dependencies |
-| `data/raw/` | Local source files; ignored by Git until sharing rights are reviewed |
-| `data/processed/` | Generated CSV; ignored by Git |
-| `.gitignore` | Excludes source data, generated data, and local machine files |
+How do recorded homicide victim counts vary across years, reported age groups, and California counties—and how can we make those descriptive results auditable?
 
-## Required source files
+I developed a Python workflow to clean, validate, and summarize a **historical California Department of Justice (DOJ) OpenJustice homicide extract** downloaded in August 2023. The project emphasizes careful data preparation, defensible interpretation, automated checks, and reproducible tables and visualizations.
 
-Place these two files in `data/raw/`, using their original filenames:
+**Scope:** 10,106 source victim records coded as actual/willful homicide, with incident (assault) years 2018–2022, across 56 counties represented in the extract.
 
-- `HomicideActuals1987-2022.csv` — historical California DOJ OpenJustice homicide extract downloaded in August 2023.
-- `NCIC Code Jurisdiction List_04242023.xlsx` — county/agency reference workbook.
+> **Interpretation:** These are **source victim-record counts**, not verified unique incidents, population-adjusted homicide rates, or estimates of causal effects. A reporting-format transition in 2021–2022 limits direct comparisons over time.
 
-They are retained in the original **private** `California_homicides` repository. Do not republish the raw files until their redistribution terms are confirmed.
+## Key descriptive findings
 
-## Reproduce
+| Question | Finding | Important qualification |
+| --- | --- | --- |
+| Which year has the most records? | **2021: 2,338 records** | Yearly counts are affected by reporting-system changes |
+| Which broad age group has the most records? | **Ages 25–34: 2,754 records (27.3%)** | Larger counts do not establish greater age-specific risk |
+| Which county has the most records? | **Los Angeles County: 3,296 records (32.6%)** | County populations and reporting completeness are not adjusted for |
 
-From the repository root, using a compatible Python installation (Python 3.11 recommended):
+These figures summarize the **frozen 2018–2022 historical extract**, not current California homicide conditions. See the [full findings and cautions](reports/exploratory_findings.md).
+
+## Visualizations
+
+### 1. Records by incident year
+
+![Annual reported homicide victim records, 2018–2022](figures/annual_victim_records.svg)
+
+The highest observed count in this extract is in 2021. The incident date refers to the **assault**, not necessarily the date of death.
+
+### 2. Records by reported age group
+
+![Distribution of homicide victim records by reported age group](figures/age_group_victim_records.svg)
+
+Ages 25–34 make up the largest broad category. Unknown ages are retained as a separate group instead of being silently excluded.
+
+### 3. Counties with the largest recorded totals
+
+![California counties with the highest source victim-record counts](figures/top_10_counties.svg)
+
+Los Angeles County has the largest absolute count. The county field describes the **county of the reporting agency**; counts are not adjusted for population.
+
+The underlying [annual](reports/annual_counts.csv), [age-group](reports/age_group_counts.csv), and [county](reports/county_counts.csv) summary tables are included so results can be inspected without access to the archived source files.
+
+## What the workflow demonstrates
+
+- **Data cleaning:** Select study years and relevant crime-status codes; create consistent date and age-group variables while retaining source-row provenance.
+- **Data quality and research judgment:** Preserve six ambiguous exact source-row matches rather than assuming they represent duplicate people; distinguish unknown age codes from infant codes.
+- **Validated merging:** Correct a documented county crosswalk issue (code 54 = Tulare County; code 16 = Kings County) and enforce a many-to-one merge to prevent row multiplication.
+- **Reproducibility:** Check expected record counts, annual totals, dates, county labels, and county mappings; generate summary tables and charts directly from prepared data.
+- **Testing:** Maintain **eight automated tests**, including synthetic examples that do not need the original source data. GitHub Actions runs the tests and a data-free demonstration.
+
+## Reproduce the project
+
+This repository intentionally **does not include the original individual-level CSV or county reference workbook**. There are two ways to run the code:
+
+### A. Public, data-free demonstration
+
+Requires Python and access to this repository, but **no archived DOJ inputs**:
 
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate   # macOS / Linux
 python -m pip install -r requirements.txt
-python -m pytest -q
-python prepare_homicides.py
-```
 
-The script writes `data/processed/homicide_clean.csv` after all expected-count checks pass.
-
-## Quick start: no source-data download required
-
-The **synthetic demonstration** runs the actual cleaning functions using invented observations. To reproduce the publication charts, use the three tracked aggregate tables:
-
-```bash
-python -m pip install -r requirements.txt
 python -m pytest -q
 python examples/synthetic_demo.py
 python scripts/build_figures.py --from-summaries
 ```
 
-This re-creates the three Matplotlib charts without needing the original CSV or workbook. Rebuilding the individual-level historical dataset separately requires those archived inputs. See [data access and reproducibility](docs/data_access.md) for the distinction.
+This runs synthetic tests and a demonstration of the preparation functions, then regenerates the figures from the published aggregate tables. **It does not independently reconstruct the original individual-level dataset.**
 
-## What is checked
+### B. Full historical-data rebuild
 
-- Restrict to incident years **2018–2022**, keeping original source-row identifiers.
-- Preserve exact duplicate rows rather than assuming they refer to duplicate people.
-- Correct a documented reference workbook error: **county code 54 maps to Tulare County, not Kings County**; code **16 maps to Kings County**.
-- Require a **many-to-one county merge** so reference data cannot multiply source rows.
-- Validate incident dates and preserve original sex/race codes without undocumented relabeling.
-- Create broad age groups that distinguish coded infants from unknown ages.
-- Assert source-record and annual-count benchmarks from the previous methodological audit.
+If you have the exact archived inputs, place them under `data/raw/` with these filenames:
 
-The older audit reported **88,930 source rows** and **10,106 records in 2018–2022** (annual counts: 2018 = 1,738; 2019 = 1,665; 2020 = 2,178; 2021 = 2,338; 2022 = 2,187). It also identified **six ambiguous exact matches** and **161 county-code-54 records**. The standalone pipeline **was run against both original source files on October 28, 2026**; all count checks passed and the generated CSV contained exactly 10,106 records. Six synthetic regression tests also passed. The files themselves are not checked into this repo.
+- `HomicideActuals1987-2022.csv`
+- `NCIC Code Jurisdiction List_04242023.xlsx`
 
-
-## Official source documentation
-
-The June 2023 California DOJ CJSC *Homicide File Context* provides the field definitions for crime status, incident dates, victim age, sex, and race/ethnicity. See [source codebook notes](docs/source_codebook.md). We confirmed that all 10,106 selected records are coded **1 = actual/willful homicide**. Importantly, `incident_date` is the **date of the assault**, not necessarily the date of death. The combined race/ethnicity coding and 2021–2022 reporting transition require particular care.
-
-
-## Phase 2: Descriptive analysis and visualizations
-
-Three descriptive figure previews are now available below, with transparent summary tables and reproducible Matplotlib code.
-
-**Annual source victim records (2018–2022)**  
-![Reported victim records by incident year](figures/annual_victim_records.svg)
-
-**Victim-record distribution by reported age group**  
-![Recorded age group](figures/age_group_victim_records.svg)
-
-**Counties with the largest recorded counts**  
-![Top 10 county counts](figures/top_10_counties.svg)
-
-**Research highlights:** Annual source-record counts peaked at **2,338 in 2021**; records aged **25–34** were the largest broad age group (**2,754**); and **Los Angeles County** accounted for the largest county total (**3,296**). These are **raw victim-record counts, not population-adjusted homicide rates**, and direct comparison of annual counts is complicated by changes in reporting systems.
-
-See [interpretations and limitations](reports/exploratory_findings.md), [three aggregate CSV tables](reports/), and [the plotting script](scripts/build_figures.py).
-
-To regenerate figures after producing the cleaned CSV:
+Then run:
 
 ```bash
+python prepare_homicides.py
 python scripts/build_figures.py
 ```
 
-To reproduce equivalent figures **without downloading raw data**, using the published aggregate CSVs:
+The first script validates the source and writes `data/processed/homicide_clean.csv`; the second generates the three CSV summaries and the SVG/PNG figures. The exact historical records must pass the built-in audit checks.
 
-```bash
-python scripts/build_figures.py --from-summaries
-```
+The workflow has been run locally with **Python 3.14.10**; GitHub Actions tests it with **Python 3.11**. See [source availability and reproducibility](docs/data_access.md) for why a current DOJ download may not reproduce the historical extract.
 
-## Interpretation and limitations
+## Repository guide
 
-**Unit of analysis: source homicide victim records**, not proven unique people or homicide incidents. The project does not calculate population-adjusted rates or causal effects. Exact matches without case identifiers may represent separate people; reporting changes in 2021–2022 may complicate time comparisons. See the [California DOJ OpenJustice portal](https://openjustice.doj.ca.gov/data) for source context.
+| Location | Contents |
+| --- | --- |
+| [`prepare_homicides.py`](prepare_homicides.py) | Source validation, cleaning, county merge, and analysis-ready export |
+| [`scripts/build_figures.py`](scripts/build_figures.py) | Aggregate tables and publication figures |
+| [`tests/`](tests/) | Automated regression and summary checks |
+| [`examples/synthetic_demo.py`](examples/synthetic_demo.py) | Invented-data demonstration of the real preparation functions |
+| [`reports/`](reports/) | Audited aggregate CSVs, descriptive findings, and validation notes |
+| [`figures/`](figures/) | SVG and PNG visualizations |
+| [`docs/source_codebook.md`](docs/source_codebook.md) | Historical source definitions and coding decisions |
+| [`docs/data_access.md`](docs/data_access.md) | Source provenance, access, and limits to open reproducibility |
 
-## Author
+## Methodological limitations
 
-Ismael Soto Jr. — Master of Public Policy and Graduate Certificate in Applied Data Science, UC Berkeley.
+- Each row represents a **source homicide victim record**, which may not map one-to-one to a unique person or incident.
+- The recorded incident date is the **assault date**; it is not necessarily the death date.
+- DOJ's 2021–2022 reporting changes constrain comparisons across years.
+- Raw county and age-group totals do **not** measure risk: population denominators, potential reporting differences, and other relevant factors are not accounted for.
+- The source combines race and Hispanic ethnicity codes; the project does not create unsupported demographic categories or make causal claims.
+
+For details, consult the [source codebook notes](docs/source_codebook.md), [validation notes](reports/validation_results.md), and [interpretive findings](reports/exploratory_findings.md).
+
+## Next research directions
+
+Potential extensions include carefully matched population denominators for county-level rates, greater scrutiny of reporting-system changes, and additional descriptive variables after validating their source coding. These are **planned directions**, not analyses currently completed here.
+
+---
+
+**Author:** Ismael Soto Jr. · Master of Public Policy and Graduate Certificate in Applied Data Science, UC Berkeley.
