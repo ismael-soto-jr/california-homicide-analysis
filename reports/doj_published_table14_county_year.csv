@@ -1,0 +1,291 @@
+county,year,published_homicide_crimes
+Alameda County,2018,92
+Alameda County,2019,96
+Alameda County,2020,143
+Alameda County,2021,146
+Alameda County,2022,158
+Alpine County,2018,0
+Alpine County,2019,0
+Alpine County,2020,0
+Alpine County,2021,0
+Alpine County,2022,0
+Amador County,2018,3
+Amador County,2019,1
+Amador County,2020,2
+Amador County,2021,4
+Amador County,2022,0
+Butte County,2018,10
+Butte County,2019,7
+Butte County,2020,12
+Butte County,2021,13
+Butte County,2022,11
+Calaveras County,2018,2
+Calaveras County,2019,1
+Calaveras County,2020,0
+Calaveras County,2021,2
+Calaveras County,2022,1
+Colusa County,2018,3
+Colusa County,2019,0
+Colusa County,2020,1
+Colusa County,2021,0
+Colusa County,2022,0
+Contra Costa County,2018,40
+Contra Costa County,2019,54
+Contra Costa County,2020,44
+Contra Costa County,2021,50
+Contra Costa County,2022,44
+Del Norte County,2018,1
+Del Norte County,2019,2
+Del Norte County,2020,2
+Del Norte County,2021,1
+Del Norte County,2022,3
+El Dorado County,2018,5
+El Dorado County,2019,5
+El Dorado County,2020,0
+El Dorado County,2021,3
+El Dorado County,2022,11
+Fresno County,2018,54
+Fresno County,2019,55
+Fresno County,2020,94
+Fresno County,2021,87
+Fresno County,2022,83
+Glenn County,2018,1
+Glenn County,2019,2
+Glenn County,2020,2
+Glenn County,2021,0
+Glenn County,2022,0
+Humboldt County,2018,11
+Humboldt County,2019,6
+Humboldt County,2020,9
+Humboldt County,2021,8
+Humboldt County,2022,7
+Imperial County,2018,6
+Imperial County,2019,7
+Imperial County,2020,7
+Imperial County,2021,14
+Imperial County,2022,11
+Inyo County,2018,0
+Inyo County,2019,1
+Inyo County,2020,1
+Inyo County,2021,0
+Inyo County,2022,1
+Kern County,2018,101
+Kern County,2019,84
+Kern County,2020,116
+Kern County,2021,124
+Kern County,2022,101
+Kings County,2018,5
+Kings County,2019,4
+Kings County,2020,11
+Kings County,2021,11
+Kings County,2022,16
+Lake County,2018,8
+Lake County,2019,5
+Lake County,2020,1
+Lake County,2021,5
+Lake County,2022,1
+Lassen County,2018,0
+Lassen County,2019,0
+Lassen County,2020,0
+Lassen County,2021,0
+Lassen County,2022,3
+Los Angeles County,2018,570
+Los Angeles County,2019,508
+Los Angeles County,2020,677
+Los Angeles County,2021,841
+Los Angeles County,2022,739
+Madera County,2018,12
+Madera County,2019,3
+Madera County,2020,9
+Madera County,2021,5
+Madera County,2022,6
+Marin County,2018,5
+Marin County,2019,1
+Marin County,2020,1
+Marin County,2021,1
+Marin County,2022,5
+Mariposa County,2018,0
+Mariposa County,2019,0
+Mariposa County,2020,0
+Mariposa County,2021,4
+Mariposa County,2022,1
+Mendocino County,2018,13
+Mendocino County,2019,3
+Mendocino County,2020,6
+Mendocino County,2021,8
+Mendocino County,2022,2
+Merced County,2018,9
+Merced County,2019,12
+Merced County,2020,24
+Merced County,2021,27
+Merced County,2022,35
+Modoc County,2018,0
+Modoc County,2019,0
+Modoc County,2020,1
+Modoc County,2021,0
+Modoc County,2022,0
+Mono County,2018,0
+Mono County,2019,0
+Mono County,2020,2
+Mono County,2021,1
+Mono County,2022,0
+Monterey County,2018,27
+Monterey County,2019,15
+Monterey County,2020,14
+Monterey County,2021,35
+Monterey County,2022,23
+Napa County,2018,1
+Napa County,2019,1
+Napa County,2020,1
+Napa County,2021,0
+Napa County,2022,2
+Nevada County,2018,2
+Nevada County,2019,3
+Nevada County,2020,5
+Nevada County,2021,4
+Nevada County,2022,2
+Orange County,2018,49
+Orange County,2019,57
+Orange County,2020,59
+Orange County,2021,71
+Orange County,2022,60
+Placer County,2018,4
+Placer County,2019,7
+Placer County,2020,7
+Placer County,2021,4
+Placer County,2022,10
+Plumas County,2018,0
+Plumas County,2019,1
+Plumas County,2020,1
+Plumas County,2021,0
+Plumas County,2022,0
+Riverside County,2018,94
+Riverside County,2019,118
+Riverside County,2020,154
+Riverside County,2021,111
+Riverside County,2022,113
+Sacramento County,2018,71
+Sacramento County,2019,78
+Sacramento County,2020,100
+Sacramento County,2021,107
+Sacramento County,2022,102
+San Benito County,2018,1
+San Benito County,2019,1
+San Benito County,2020,3
+San Benito County,2021,1
+San Benito County,2022,3
+San Bernardino County,2018,126
+San Bernardino County,2019,147
+San Bernardino County,2020,181
+San Bernardino County,2021,177
+San Bernardino County,2022,186
+San Diego County,2018,85
+San Diego County,2019,86
+San Diego County,2020,114
+San Diego County,2021,119
+San Diego County,2022,106
+San Francisco County,2018,47
+San Francisco County,2019,40
+San Francisco County,2020,49
+San Francisco County,2021,56
+San Francisco County,2022,56
+San Joaquin County,2018,52
+San Joaquin County,2019,50
+San Joaquin County,2020,84
+San Joaquin County,2021,61
+San Joaquin County,2022,60
+San Luis Obispo County,2018,3
+San Luis Obispo County,2019,5
+San Luis Obispo County,2020,7
+San Luis Obispo County,2021,2
+San Luis Obispo County,2022,3
+San Mateo County,2018,12
+San Mateo County,2019,10
+San Mateo County,2020,16
+San Mateo County,2021,18
+San Mateo County,2022,13
+Santa Barbara County,2018,11
+Santa Barbara County,2019,17
+Santa Barbara County,2020,8
+Santa Barbara County,2021,18
+Santa Barbara County,2022,21
+Santa Clara County,2018,32
+Santa Clara County,2019,45
+Santa Clara County,2020,53
+Santa Clara County,2021,57
+Santa Clara County,2022,41
+Santa Cruz County,2018,5
+Santa Cruz County,2019,6
+Santa Cruz County,2020,12
+Santa Cruz County,2021,12
+Santa Cruz County,2022,2
+Shasta County,2018,13
+Shasta County,2019,6
+Shasta County,2020,12
+Shasta County,2021,0
+Shasta County,2022,0
+Sierra County,2018,0
+Sierra County,2019,0
+Sierra County,2020,0
+Sierra County,2021,0
+Sierra County,2022,0
+Siskiyou County,2018,3
+Siskiyou County,2019,6
+Siskiyou County,2020,2
+Siskiyou County,2021,4
+Siskiyou County,2022,1
+Solano County,2018,18
+Solano County,2019,21
+Solano County,2020,40
+Solano County,2021,32
+Solano County,2022,37
+Sonoma County,2018,9
+Sonoma County,2019,9
+Sonoma County,2020,10
+Sonoma County,2021,9
+Sonoma County,2022,22
+Stanislaus County,2018,40
+Stanislaus County,2019,25
+Stanislaus County,2020,33
+Stanislaus County,2021,26
+Stanislaus County,2022,27
+Sutter County,2018,1
+Sutter County,2019,4
+Sutter County,2020,5
+Sutter County,2021,5
+Sutter County,2022,2
+Tehama County,2018,4
+Tehama County,2019,3
+Tehama County,2020,7
+Tehama County,2021,2
+Tehama County,2022,4
+Trinity County,2018,2
+Trinity County,2019,2
+Trinity County,2020,2
+Trinity County,2021,1
+Trinity County,2022,0
+Tulare County,2018,26
+Tulare County,2019,20
+Tulare County,2020,29
+Tulare County,2021,42
+Tulare County,2022,44
+Tuolumne County,2018,2
+Tuolumne County,2019,2
+Tuolumne County,2020,1
+Tuolumne County,2021,1
+Tuolumne County,2022,0
+Ventura County,2018,35
+Ventura County,2019,24
+Ventura County,2020,20
+Ventura County,2021,20
+Ventura County,2022,18
+Yolo County,2018,6
+Yolo County,2019,6
+Yolo County,2020,6
+Yolo County,2021,5
+Yolo County,2022,4
+Yuba County,2018,7
+Yuba County,2019,7
+Yuba County,2020,2
+Yuba County,2021,6
+Yuba County,2022,5
