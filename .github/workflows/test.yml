@@ -27,3 +27,7 @@ jobs:
         run: python scripts/analyze_summaries.py --check
       - name: Check transcribed DOJ Table 14 county-year reference
         run: python scripts/reconcile_doj_publication.py --check-reference
+      - name: Regenerate public population-adjusted chart without private inputs
+        env:
+          MPLBACKEND: Agg
+        run: python scripts/compare_published_county_ratios.py --from-summary

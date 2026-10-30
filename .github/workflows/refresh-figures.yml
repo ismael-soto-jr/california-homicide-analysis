@@ -8,6 +8,7 @@ on:
     paths:
       - '.github/workflows/refresh-figures.yml'
       - 'scripts/build_figures.py'
+      - 'scripts/compare_published_county_ratios.py'
       - 'reports/*.csv'
   workflow_dispatch:
 
@@ -39,6 +40,7 @@ jobs:
         run: |
           python -m pytest -q
           python scripts/build_figures.py --from-summaries
+          python scripts/compare_published_county_ratios.py --from-summary
       - name: Commit generated SVG previews
         run: |
           git config user.name 'github-actions[bot]'
