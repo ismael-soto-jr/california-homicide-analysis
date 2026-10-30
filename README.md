@@ -124,6 +124,8 @@ A [separate, validated Python workflow](scripts/county_record_ratios.py) is avai
 
 See the [population-denominator instructions and reporting cautions](docs/population_denominators.md). The eight existing regression and summary tests are supplemented by seven synthetic tests for population validation and county-year joins.
 
+**Published-source reconciliation:** A separate [58-county, five-year DOJ Table 14 reference](reports/doj_published_table14_county_year.csv) can now be checked against the archived sample using [reconciliation code](scripts/reconcile_doj_publication.py). The published report totals **10,187** known-victim homicide crimes versus **10,106** archived source rows; differences have **not** been resolved or corrected. See the [methodological reconciliation note](docs/doj_publication_reconciliation.md). The reference CSV and its validation can be reproduced without the original individual-level source files.
+
 ## Next research directions
 
 Potential extensions include carefully matched population denominators for county-level rates, greater scrutiny of reporting-system changes, and additional descriptive variables after validating their source coding. These are **planned directions**, not analyses currently completed here.
