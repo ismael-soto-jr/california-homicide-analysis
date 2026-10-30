@@ -54,7 +54,7 @@ The underlying [annual](reports/annual_counts.csv), [age-group](reports/age_grou
 - **Data quality and research judgment:** Preserve six ambiguous exact source-row matches rather than assuming they represent duplicate people; distinguish unknown age codes from infant codes.
 - **Validated merging:** Correct a documented county crosswalk issue (code 54 = Tulare County; code 16 = Kings County) and enforce a many-to-one merge to prevent row multiplication.
 - **Reproducibility:** Check expected record counts, annual totals, dates, county labels, and county mappings; generate summary tables and charts directly from prepared data.
-- **Testing:** Maintain **eight automated tests**, including synthetic examples that do not need the original source data. GitHub Actions runs the tests and a data-free demonstration.
+- **Testing:** Maintain a growing, automated regression suite with synthetic examples that do not need the original source data. GitHub Actions runs these tests and data-free demonstrations.
 
 ## Reproduce the project
 
@@ -122,9 +122,17 @@ For details, consult the [source codebook notes](docs/source_codebook.md), [vali
 
 A [separate, validated Python workflow](scripts/county_record_ratios.py) is available for matching source victim-record counts to **county-year July 1 resident population estimates**. This extension requires an external, verified **58-county × five-year** population file. The output is intentionally kept local and **no resulting county-year ratios, rankings, or risk claims have been published**.
 
-See the [population-denominator instructions and reporting cautions](docs/population_denominators.md). The eight existing regression and summary tests are supplemented by seven synthetic tests for population validation and county-year joins.
+See the [population-denominator instructions and reporting cautions](docs/population_denominators.md). Automated tests cover data preparation, county-year joins, published-source reconciliation, and aggregate consistency.
 
 **Published-source reconciliation:** A separate [58-county, five-year DOJ Table 14 reference](reports/doj_published_table14_county_year.csv) can now be checked against the archived sample using [reconciliation code](scripts/reconcile_doj_publication.py). The published report totals **10,187** known-victim homicide crimes versus **10,106** archived source rows; differences have **not** been resolved or corrected. See the [methodological reconciliation note](docs/doj_publication_reconciliation.md). The reference CSV and its validation can be reproduced without the original individual-level source files.
+
+## Published county counts compared with population (exploratory)
+
+A separate [Python comparison script](scripts/compare_published_county_ratios.py) now uses the DOJ's published county-year homicide-crime table and a verified local California Department of Finance county population CSV to calculate **five-year pooled annualized counts per 100,000 residents**.
+
+The local CSV and chart are deliberately **not published yet**: source definitions, the reporting transition, and mixed-vintage population estimates require careful interpretation. A two-panel figure selects the **same 12 largest-population counties** for absolute published counts and annualized population-adjusted descriptive ratios.
+
+See [data sources, formula, and caveats](docs/published_county_population_comparison.md). Run `python scripts/compare_published_county_ratios.py` locally after preparing the complete population file.
 
 ## Next research directions
 
