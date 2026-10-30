@@ -1,6 +1,6 @@
 # California Homicide Analysis (2018–2022)
 
-**Research analyst portfolio project | Python · pandas · Matplotlib · data validation**
+**Research analyst portfolio project | Python · R · pandas · dplyr · Matplotlib · ggplot2 · data validation**
 
 [![Data preparation tests](https://github.com/ismael-soto-jr/california-homicide-analysis/actions/workflows/test.yml/badge.svg)](https://github.com/ismael-soto-jr/california-homicide-analysis/actions/workflows/test.yml)
 
@@ -143,6 +143,18 @@ python scripts/compare_published_county_ratios.py --from-summary
 ```
 
 For full source-join validation, see the [analysis code](scripts/compare_published_county_ratios.py), [population documentation](docs/published_county_population_comparison.md), and [DOJ Table 14 county-year table](reports/doj_published_table14_county_year.csv).
+
+## R demonstration: audited county count-to-population ratios
+
+The [R demonstration](R/README.md) revisits the original workflow's **clean → aggregate → match denominators → calculate rates → visualize → validate** sequence in a shorter, reviewable script. It uses only tracked public DOJ county-year counts and previously audited DOF population-person-year totals, not the original IPUMS demographic extract.
+
+```bash
+Rscript -e 'install.packages(c("dplyr", "readr", "ggplot2"), repos="https://cloud.r-project.org")'
+Rscript R/tests/test_pooled_count_ratio_demo.R
+Rscript R/pooled_count_ratio_demo.R
+```
+
+The independent R implementation verifies all 58 county totals, recomputes annualized ratios, produces a local CSV and a two-panel PNG comparison, and includes synthetic regression tests. **It does not independently rebuild annual population files or estimate demographic-specific Census/SHR rates.** See the [R methodology and limitations](R/README.md) before interpreting the values.
 
 ## Next research directions
 
