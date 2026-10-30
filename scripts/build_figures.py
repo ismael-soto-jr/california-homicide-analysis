@@ -35,7 +35,10 @@ def source_summaries():
         raise ValueError("Missing analysis values")
     annual = df.groupby("incident_year").size().reindex(YEARS, fill_value=0)
     age = df.groupby("victim_age_group").size().reindex(AGE_ORDER, fill_value=0)
-    county = df.groupby("county").size().sort_values(ascending=False)
+    county = df.groupby("county").size()
+    county = county.sort_index().sort_values(
+        ascending=False, kind="stable"
+    )
     if df["victim_age_group"].isin(AGE_ORDER).sum() != len(df):
         raise ValueError("Unexpected age group")
     REPORTS.mkdir(exist_ok=True)
