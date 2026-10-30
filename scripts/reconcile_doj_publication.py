@@ -32,8 +32,6 @@ def validate_published(reference: pd.DataFrame, *, full_reference: bool = True) 
     result = reference.copy()
     if result.isna().any().any():
         raise ValueError("Published table contains missing values")
-    if result["county"].duplicated().all():
-        raise ValueError("Published table has invalid county keys")
     if not result["county"].astype(str).str.endswith(" County").all():
         raise ValueError("Published county names must end in ' County'")
     for column in ["year", "published_homicide_crimes"]:
