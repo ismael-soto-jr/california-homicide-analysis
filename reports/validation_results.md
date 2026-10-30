@@ -2,7 +2,9 @@
 
 **Historical extract:** California DOJ OpenJustice homicide source, downloaded August 2023  
 **Study years:** 2018–2022  
-**Validation:** Executed locally against the user-supplied CSV and NCIC workbook on October 28, 2026.
+**Original detailed audit:** Executed locally against the archived source CSV and NCIC workbook on October 28, 2026.  
+**Local reproduction:** The full preparation and figure-generation scripts ran successfully again on October 29, 2026, validating 10,106 records. The existing eight-test suite also passed locally.  
+**CI:** GitHub Actions independently runs the data-free preparation tests and rebuilds charts from published aggregate tables.
 
 ## Results
 
@@ -20,7 +22,7 @@
 | Recorded age group `Unknown` | 53 |
 | Missing victim sex code | 1 |
 | Missing victim race code | 0 |
-| Synthetic regression tests | 6 passed |
+| Automated tests (preparation and published summaries) | 8 passed locally (October 29, 2026) |
 
 ### Annual counts
 
@@ -48,4 +50,6 @@ Each row is a **source victim record**, not necessarily a unique victim or homic
 
 ## Reproducibility and distribution
 
-The **six synthetic tests** can run in GitHub Actions without input files. The full historical-data validation was run locally against the original CSV and Excel workbook. They and the derived CSV are deliberately excluded from Git until redistribution rights are reviewed.
+All **eight automated tests** (seven preparation tests using synthetic inputs and one published-aggregate consistency test) can run in GitHub Actions without archived source files. The full historical-data validation was separately run locally against the original CSV and Excel workbook; these original files and the cleaned record-level CSV are excluded from Git pending source-version and redistribution review.
+
+A separate [descriptive composition analysis](composition_findings.md) calculates age-group and county concentration shares from the audited public summary tables. Run `python scripts/analyze_summaries.py --check` to verify that the derived [metrics CSV](composition_metrics.csv) matches those summaries. This public-data check is **not** a substitute for rebuilding the individual-level dataset from archived inputs.
